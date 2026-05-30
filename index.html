@@ -5,6 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScanDat AI — Scan Events to Your Calendar</title>
     <meta name="description" content="Snap a photo of any flyer, poster, or schedule and instantly add events to your Apple or Google Calendar. Powered by AI.">
+    <link rel="canonical" href="https://scandat.app/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ScanDat AI">
+    <meta property="og:url" content="https://scandat.app/">
+    <meta property="og:title" content="ScanDat AI — Scan Events to Your Calendar">
+    <meta property="og:description" content="Snap a photo of any flyer, poster, or schedule and instantly add events to your Apple or Google Calendar. Powered by AI.">
+    <meta property="og:image" content="https://scandat.app/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ScanDat AI — snap a flyer, get the event in your calendar">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ScanDat AI — Scan Events to Your Calendar">
+    <meta name="twitter:description" content="Snap a photo of any flyer, poster, or schedule and instantly add events to your Apple or Google Calendar.">
+    <meta name="twitter:image" content="https://scandat.app/og-image.png">
+
+    <!-- Structured data: app -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ScanDat AI",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "iOS 16.0 or later",
+        "description": "Snap a photo of any flyer, poster, schedule, or screenshot and AI extracts the events and adds them to your Apple or Google Calendar.",
+        "url": "https://scandat.app/",
+        "offers": [
+            { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Pro Monthly", "price": "3.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Pro Annual", "price": "19.99", "priceCurrency": "USD" }
+        ]
+    }
+    </script>
+
+    <!-- Structured data: FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "What can ScanDat scan?", "acceptedAnswer": { "@type": "Answer", "text": "Flyers, posters, event schedules, class timetables, screenshots, PDFs, and pasted text such as WhatsApp messages or emails. If it contains an event, ScanDat can extract it." } },
+            { "@type": "Question", "name": "Is my data private?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The images and text you scan are processed in real time to extract events and are not stored on our servers. ScanDat uses no analytics or advertising SDKs and never sells your data." } },
+            { "@type": "Question", "name": "How accurate is it?", "acceptedAnswer": { "@type": "Answer", "text": "ScanDat uses AI to read your images, so it is very accurate on clear photos. AI can make mistakes, so you review and edit every event before it is added to your calendar." } },
+            { "@type": "Question", "name": "Which calendars does it work with?", "acceptedAnswer": { "@type": "Answer", "text": "Apple Calendar and Google Calendar. You can choose which calendar each event goes to." } },
+            { "@type": "Question", "name": "Do I need an account?", "acceptedAnswer": { "@type": "Answer", "text": "You sign in with Apple or Google. With Sign in with Apple's Hide My Email, we never see your real email address." } },
+            { "@type": "Question", "name": "How much does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "ScanDat is free for 10 scans per day. Pro ($3.99/month or $19.99/year) increases this to 50 scans per day." } }
+        ]
+    }
+    </script>
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -317,6 +370,53 @@
             letter-spacing: 0.5px;
         }
 
+        /* FAQ */
+        .faq { padding: 48px 0; }
+        .faq details {
+            background: white;
+            border-radius: 14px;
+            padding: 0 22px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .faq summary {
+            list-style: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            color: #2D1F2D;
+            padding: 18px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+        .faq summary::-webkit-details-marker { display: none; }
+        .faq summary::after {
+            content: "+";
+            color: #E91E63;
+            font-size: 22px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .faq details[open] summary::after { content: "\2212"; }
+        .faq details p {
+            font-size: 14px;
+            color: #6D4C6D;
+            padding: 0 0 20px;
+            margin: 0;
+        }
+        .faq details p a { color: #E91E63; text-decoration: none; }
+        .faq details p a:hover { text-decoration: underline; }
+
+        /* AI note */
+        .ai-note {
+            font-size: 12px;
+            color: #9E7A9E;
+            margin-bottom: 14px;
+            line-height: 1.5;
+        }
+
         /* CTA */
         .cta {
             text-align: center;
@@ -555,6 +655,36 @@
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know.</p>
+        <details>
+            <summary>What can ScanDat scan?</summary>
+            <p>Flyers, posters, event schedules, class timetables, screenshots, PDFs, and pasted text such as WhatsApp messages or emails. If it contains an event, ScanDat can extract it.</p>
+        </details>
+        <details>
+            <summary>Is my data private?</summary>
+            <p>Yes. The images and text you scan are processed in real time to extract events and are <strong>not stored</strong> on our servers. ScanDat uses no analytics or advertising SDKs and never sells your data. See our <a href="/privacy">Privacy Policy</a> for details.</p>
+        </details>
+        <details>
+            <summary>How accurate is it?</summary>
+            <p>ScanDat uses AI to read your images, so it's very accurate on clear photos. AI can make mistakes, so you review and edit every event before it's added to your calendar.</p>
+        </details>
+        <details>
+            <summary>Which calendars does it work with?</summary>
+            <p>Apple Calendar and Google Calendar. You can choose which calendar each event goes to.</p>
+        </details>
+        <details>
+            <summary>Do I need an account?</summary>
+            <p>You sign in with Apple or Google. With Sign in with Apple's Hide My Email, we never see your real email address.</p>
+        </details>
+        <details>
+            <summary>How much does it cost?</summary>
+            <p>ScanDat is free for 10 scans per day. Pro ($3.99/month or $19.99/year) increases this to 50 scans per day.</p>
+        </details>
+    </section>
+
 </div>
 
 <!-- Final CTA -->
@@ -573,6 +703,7 @@
         <a href="/terms">Terms of Service</a>
         <a href="mailto:support@scandat.app">Contact</a>
     </div>
+    <p class="ai-note">ScanDat uses AI to read your images — AI can make mistakes, so always review events before adding them to your calendar.</p>
     <p>&copy; 2026 ScanDat AI. All rights reserved.</p>
 </footer>
 
