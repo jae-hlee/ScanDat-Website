@@ -124,7 +124,15 @@
             transition: background 0.3s, color 0.3s;
         }
         .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
-        .icon { width: 24px; height: 24px; color: var(--pink); flex-shrink: 0; }
+        .icon {
+            width: 24px; height: 24px; flex-shrink: 0;
+            color: var(--pink);
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
 
         /* Theme toggle */
         .theme-toggle {
