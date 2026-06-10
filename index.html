@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScanDat AI — Scan Events to Your Calendar</title>
-    <meta name="description" content="Snap a photo of any flyer, poster, or schedule and instantly add events to your Apple or Google Calendar. Powered by AI.">
+    <meta name="description" content="ScanDat AI snaps a photo of any flyer, poster, or schedule and instantly adds the events to your Apple or Google Calendar. AI-powered schedule scanner for iPhone.">
     <link rel="canonical" href="https://scandat.app/">
 
     <!-- Favicons -->
@@ -167,6 +167,15 @@
 
         /* Header / hero */
         header { text-align: center; padding: 92px 24px 40px; position: relative; }
+        .brand { display: inline-flex; align-items: center; gap: 11px; margin-bottom: 30px; }
+        .brand-mark {
+            width: 42px; height: 42px;
+            display: inline-flex; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, var(--pink), var(--pink-deep));
+            border-radius: 12px;
+        }
+        .brand-mark .icon { width: 25px; height: 25px; color: #fff; stroke-width: 2; }
+        .brand-name { font-size: 22px; font-weight: 800; letter-spacing: -0.6px; color: var(--text); }
         h1 {
             font-size: 52px;
             font-weight: 800;
@@ -397,6 +406,10 @@
 </button>
 
 <header>
+    <div class="brand">
+        <span class="brand-mark"><svg class="icon"><use href="#i-scan"/></svg></span>
+        <span class="brand-name">ScanDat AI</span>
+    </div>
     <h1>Snap a flyer.<br>It's in your calendar.</h1>
     <p class="tagline">Stop typing events by hand.</p>
     <p class="subtitle">Take a photo of any flyer, poster, schedule, or screenshot &mdash; AI extracts the events and adds them to your calendar in seconds.</p>
